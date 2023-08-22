@@ -1,0 +1,18 @@
+﻿services: 
+  catalogdb:
+    container_name: catalogdb
+    restart: always
+    volumes:
+      - ${WEBAPP_STORAGE_HOME}/site:/data/db
+    ports:
+      - "27017:27017"
+  
+  catalog.api:
+    container_name: catalogapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "CatalogDatabaseSettings:ConnectionString=mongodb://catalogdb:27017"
+    depends_on: 
+      - catalogdb
+    ports:
+      - "8080:80"
