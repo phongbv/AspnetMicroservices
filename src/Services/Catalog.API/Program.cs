@@ -1,5 +1,7 @@
 using Catalog.API.Data;
 using Catalog.API.Repositories;
+using Catalog.API.Settings;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,12 +9,21 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 var services = builder.Services;
-
+services.AddControllers();
 #region Project DI
 
+services.Configure<CatalogDatabaseSettings>(builder.Configuration.GetSection(nameof(CatalogDatabaseSettings)));
 services.AddScoped<ICatalogContext, CatalogContext>();
 services.AddScoped<IProductRepository, ProductRepository>();
 
+services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Catalog API",
+        Version = "v1"
+    });
+});
 #endregion
 
 var app = builder.Build();
@@ -33,5 +44,13 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
-
+app.UseEndpoints(configure =>
+{
+    configure.MapControllers();
+});
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Catalog API V1");
+});
 app.Run();

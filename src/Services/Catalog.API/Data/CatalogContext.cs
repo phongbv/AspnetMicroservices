@@ -1,17 +1,18 @@
 ﻿using Catalog.API.API.Data;
 using Catalog.API.Entities;
 using Catalog.API.Settings;
+using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 namespace Catalog.API.Data;
 
 public class CatalogContext : ICatalogContext
 {
-    public CatalogContext(ICatalogDatabaseSettings settings)
+    public CatalogContext(IOptions<CatalogDatabaseSettings> settings)
     {
-        var client = new MongoClient(settings.ConnectionString);
-        var database = client.GetDatabase(settings.DatabaseName);
-        Products = database.GetCollection<Product>(settings.CollectionName);
+        var client = new MongoClient(settings.Value.ConnectionString);
+        var database = client.GetDatabase(settings.Value.DatabaseName);
+        Products = database.GetCollection<Product>(settings.Value.CollectionName);
         CatalogContextSeed.SeedData(Products);
     }
     

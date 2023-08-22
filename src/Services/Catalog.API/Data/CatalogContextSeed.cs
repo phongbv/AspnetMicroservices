@@ -22,7 +22,7 @@ namespace Catalog.API.API.Data
         {
             return new List<Product>()
             {
-                new Product()
+                new()
                 {
                     Name = "IPhone X",
                     Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
@@ -31,7 +31,7 @@ namespace Catalog.API.API.Data
                     Price = 950.00M,
                     Category = "Smart Phone"
                 },
-                new Product()
+                new()
                 {
                     Name = "Samsung 10",
                     Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
@@ -40,7 +40,7 @@ namespace Catalog.API.API.Data
                     Price = 840.00M,
                     Category = "Smart Phone"
                 },
-                new Product()
+                new()
                 {
                     Name = "Huawei Plus",
                     Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
@@ -49,7 +49,7 @@ namespace Catalog.API.API.Data
                     Price = 650.00M,
                     Category = "White Appliances"
                 },
-                new Product()
+                new()
                 {
                     Name = "Xiaomi Mi 9",
                     Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
@@ -58,7 +58,7 @@ namespace Catalog.API.API.Data
                     Price = 470.00M,
                     Category = "White Appliances"
                 },
-                new Product()
+                new()
                 {
                     Name = "HTC U11+ Plus",
                     Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
@@ -67,7 +67,7 @@ namespace Catalog.API.API.Data
                     Price = 380.00M,
                     Category = "Smart Phone"
                 },
-                new Product()
+                new()
                 {
                     Name = "LG G7 ThinQ",
                     Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
