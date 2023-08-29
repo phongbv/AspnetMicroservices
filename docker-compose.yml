@@ -15,3 +15,15 @@
     build:
       context: .
       dockerfile: /src/Services/Basket.API/Dockerfile
+  
+  discountdb:
+    image: postgres
+    
+  pgadmin:
+      image: dpage/pgadmin4
+
+  discount.api:
+    image: ${DOCKER_REGISTRY}-discount.api
+    build:
+      context: .
+      dockerfile: /src/Services/Discount.API/Dockerfile
