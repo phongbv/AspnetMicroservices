@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "src\Services
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.API", "src\Services\Discount\Discount.API\Discount.API.csproj", "{9ADE9E0D-4C87-4412-B8EF-D0B5D9FFEA49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGw", "src\ApiGateways\OcelotApiGw\OcelotApiGw.csproj", "{25FADC1D-C617-41DE-88D3-A098D3CD885C}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -23,6 +25,8 @@ Global
 		{F47C5204-F4DB-4C97-A839-A0D0751369B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ADE9E0D-4C87-4412-B8EF-D0B5D9FFEA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9ADE9E0D-4C87-4412-B8EF-D0B5D9FFEA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25FADC1D-C617-41DE-88D3-A098D3CD885C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25FADC1D-C617-41DE-88D3-A098D3CD885C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

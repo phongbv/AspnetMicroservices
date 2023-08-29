@@ -27,3 +27,9 @@
     build:
       context: .
       dockerfile: /src/Services/Discount/Discount.API/Dockerfile
+  
+  ocelotapigw:
+    image: ${DOCKER_REGISTRY}-ocelotapigw
+    build:
+      context: .
+      dockerfile: /src/ApiGateways/OcelotApiGw/Dockerfile

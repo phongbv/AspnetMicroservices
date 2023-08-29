@@ -65,6 +65,17 @@
     ports:
       - "8002:80"
   
+  ocelotapigw:
+    container_name: ocelotapi.gw
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on: 
+      - basket.api
+      - discount.api
+      - catalog.api
+    ports:
+      - "8010:80"
+
 volumes:
   mongo_data:
   portainer_data:
