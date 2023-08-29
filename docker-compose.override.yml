@@ -3,7 +3,7 @@
     container_name: catalogdb
     restart: always
     volumes:
-      - ${WEBAPP_STORAGE_HOME}/site:/data/db
+      - ${WEBAPP_STORAGE_HOME}/catalogdb:/data/db
     ports:
       - "27017:27017"
   
@@ -33,4 +33,41 @@
     ports:
       - "8001:80"
   
+  discountdb:
+    container_name: discountdb
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin1234
+      - POSTGRES_DB=DiscountDb
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  pgadmin:
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@aspnetrun.com
+      - PGADMIN_DEFAULT_PASSWORD=admin1234
+    restart: always
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/root/.pgadmin
   
+  discount.api:
+    container_name: discount.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=Server=discountdb;port=5432;Database=DiscountDb;User Id=admin;Password=admin1234"
+    depends_on: 
+      - discountdb
+    ports:
+      - "8002:80"
+  
+volumes:
+  mongo_data:
+  portainer_data:
+  postgres_data:
+  pgadmin_data:
+  elasticsearch-data:
