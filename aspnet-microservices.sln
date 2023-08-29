@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "src\Services\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "src\Services\Catalog.API\Catalog.API.csproj", "{F47C5204-F4DB-4C97-A839-A0D0751369B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.API", "src\Services\Discount.API\Discount.API.csproj", "{0A162CAD-D844-44E6-881C-B2A4018736A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.API", "src\Services\Discount\Discount.API\Discount.API.csproj", "{9ADE9E0D-4C87-4412-B8EF-D0B5D9FFEA49}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
@@ -21,8 +21,8 @@ Global
 		{469FA548-CBC5-490E-8FED-C53383ABB723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F47C5204-F4DB-4C97-A839-A0D0751369B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F47C5204-F4DB-4C97-A839-A0D0751369B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A162CAD-D844-44E6-881C-B2A4018736A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A162CAD-D844-44E6-881C-B2A4018736A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADE9E0D-4C87-4412-B8EF-D0B5D9FFEA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADE9E0D-4C87-4412-B8EF-D0B5D9FFEA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

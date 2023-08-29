@@ -26,4 +26,4 @@
     image: ${DOCKER_REGISTRY}-discount.api
     build:
       context: .
-      dockerfile: /src/Services/Discount.API/Dockerfile
+      dockerfile: /src/Services/Discount/Discount.API/Dockerfile
